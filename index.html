@@ -34,13 +34,24 @@
     .body-text { font-size:14px; color:#465166; line-height:20px; }
     .caption { font-size:12px; color:#6B7280; margin-top:8px; text-align:center; }
 
-    /* Prevent weird spacing on some clients */
+    /* Callout (Self-Retrospective) */
+    .callout {
+      background:#F8FAFF;
+      border:1px solid #D9E2F3;
+      border-left:6px solid #1E3A8A;
+      border-radius:12px;
+    }
+    .callout-inner { padding:14px; }
+    .callout-title { font-weight:700; color:#0B1220; }
+    .callout-text { font-size:14px; color:#465166; line-height:20px; margin-top:6px; }
+
     table { border-spacing:0; }
 
     @media (max-width: 600px) {
       .container { width:100% !important; max-width:100% !important; }
       .px { padding-left:16px !important; padding-right:16px !important; }
       .card-inner { padding:16px !important; }
+      .callout-inner { padding:12px !important; }
     }
   </style>
 </head>
@@ -124,6 +135,7 @@
     <tr>
       <td class="card-inner">
         <div class="section-title">🧠 Your Resources</div>
+
         <div class="body-text" style="margin:8px 0;">
           Here you’ll find practical reminders and best practices designed to support your day-to-day work. Think of this section as a quick reference to help things run smoothly and avoid unnecessary friction.
         </div>
@@ -153,12 +165,20 @@
           </li>
         </ul>
 
-        <div class="body-text" style="margin-top:14px;">
-          📝 <strong>Self-Retrospective Reminder:</strong><br>
-          Take a few minutes to complete your Self-Retrospective and reflect on your achievements and learnings from H2 2025.
-          <br>
-          <a href="https://betterme.starmeup.com/evaluations">Access here</a> · Deadline: <strong>February 6, 2026</strong>
-        </div>
+        <!-- FIXED SELF-RETROSPECTIVE CALLOUT -->
+        <table width="100%" cellpadding="0" cellspacing="0" class="callout" style="margin-top:14px;">
+          <tr>
+            <td class="callout-inner">
+              <div class="callout-title">📝 Self-Retrospective Reminder</div>
+              <div class="callout-text">
+                Take a few minutes to complete your Self-Retrospective and reflect on your achievements and learnings from H2 2025.
+                <br>
+                <a href="https://betterme.starmeup.com/evaluations">Access here</a> · Deadline: <strong>February 6, 2026</strong>
+              </div>
+            </td>
+          </tr>
+        </table>
+
       </td>
     </tr>
   </table>
