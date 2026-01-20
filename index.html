@@ -14,9 +14,9 @@
     li { margin-bottom:6px; }
     a { color:#0A6EDC; text-decoration:none; }
 
-    @media (max-width: 600px) {
-      .container { width: 100% !important; }
-      .px { padding-left: 16px !important; padding-right:16px !important; }
+    @media (max-width:600px) {
+      .container { width:100% !important; }
+      .px { padding-left:16px !important; padding-right:16px !important; }
       .stack { display:block !important; width:100% !important; }
     }
   </style>
@@ -24,6 +24,7 @@
 
 <body>
 
+<!-- Preheader -->
 <div style="display:none; font-size:1px; color:#f4f6f8; line-height:1px; max-height:0; max-width:0; opacity:0; overflow:hidden;">
   Monthly update · Globant teams working with Empower.
 </div>
@@ -82,7 +83,6 @@
 <table width="100%" style="border:1px solid #E6E9EF; border-radius:14px;">
 <tr><td style="padding:20px;">
   <div style="font-weight:700; color:#1E3A8A;">🔹 This Month’s Highlights</div>
-
   <ul style="font-size:14px; color:#465166; line-height:20px;">
     <li><b>Business Continuity:</b> Strong start to 2026 and our 7th consecutive year with Empower.</li>
     <li><b>2026 Planning:</b> Close alignment with the client to ensure seamless continuity.</li>
@@ -126,25 +126,46 @@
   <div style="font-weight:700;">⏱️ Use of Tempo</div>
   <ul style="font-size:14px; color:#465166;">
     <li>Log time only on active Jira issues within your assigned project.</li>
-    <li>Agile ceremonies → log under Agile Ceremonies / Meetings EPIC.</li>
+    <li>Agile ceremonies should be logged under Agile Ceremonies / Meetings EPIC.</li>
     <li>Do not log PTO, holidays, or Globant activities.</li>
   </ul>
 
   <div style="font-weight:700; margin-top:12px;">🔐 Do’s & Don’ts — Security</div>
-  <ul style="font-size:14px; color:#465166;">
-    <li>Use only Empower approved tools and environments.</li>
-    <li>Keep devices updated and locked.</li>
-    <li>Do not share client data or install unauthorized software.</li>
-  </ul>
 
-  <!-- SELF-RETRO MOVED HERE -->
+  <table width="100%" cellspacing="0" cellpadding="0" style="margin-top:8px;">
+    <tr>
+      <td class="stack" width="50%" style="padding:8px;">
+        <div style="border:1px solid #E6E9EF; border-radius:12px; padding:12px;">
+          <b>Do</b>
+          <ul style="font-size:13px; color:#465166;">
+            <li><b>Do</b> use only Empower approved tools, scripts, add-ons, and environments.</li>
+            <li><b>Do</b> keep devices updated and locked when not in use.</li>
+            <li><b>Do</b> verify requests and stay alert to phishing attempts.</li>
+          </ul>
+        </div>
+      </td>
+
+      <td class="stack" width="50%" style="padding:8px;">
+        <div style="border:1px solid #E6E9EF; border-radius:12px; padding:12px;">
+          <b>Don’t</b>
+          <ul style="font-size:13px; color:#465166;">
+            <li><b>Don’t</b> share client or project-related data outside your VDI.</li>
+            <li><b>Don’t</b> access systems or information without explicit permission.</li>
+            <li><b>Don’t</b> install unauthorized software.</li>
+          </ul>
+        </div>
+      </td>
+    </tr>
+  </table>
+
+  <!-- SELF-RETRO -->
   <table width="100%" style="margin-top:16px; border-radius:12px; background:#FFF7ED; border:1px solid #FDE68A;">
     <tr>
       <td style="padding:14px;">
         <div style="font-weight:700; color:#92400E;">📝 Self-Retrospective Reminder</div>
-        <div style="font-size:14px; color:#6B4E16; margin-top:6px; line-height:20px;">
+        <div style="font-size:14px; color:#6B4E16; margin-top:6px;">
           Take a few minutes to complete your <b>Self-Retrospective</b> and reflect on your achievements and key learnings from H2 2025.
-          <a href="{{SelfRetroLink}}">Access here</a>.  
+          <a href="{{SelfRetroLink}}">Access here</a>.
           <b>Deadline:</b> February 6, 2026.
         </div>
       </td>
@@ -212,4 +233,17 @@
     <strong style="color:#ffffff;">Empower Delivery Pulse</strong> · Internal Use Only<br>
     Want to participate in the next edition? Contact
     <strong style="color:#ffffff;">Susana Mely Cruz</strong> —
-    <a href="mailto:susana.mely@globant.com" style="color:#9ec5ff;"
+    <a href="mailto:susana.mely@globant.com" style="color:#9ec5ff;">
+      susana.mely@globant.com
+    </a>
+  </div>
+</td>
+</tr>
+
+</table>
+</td>
+</tr>
+</table>
+
+</body>
+</html>
