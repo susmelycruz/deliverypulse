@@ -53,12 +53,26 @@
     .ai-title{ font-weight:700; font-size:15px; }
     .ai-text{ font-size:14px; line-height:20px; color:#E5EDFF; margin-top:8px; }
 
+    /* Two-column helpers */
+    .col { vertical-align:top; }
+    .col-card {
+      border:1px solid #E6E9EF;
+      border-radius:12px;
+      background:#ffffff;
+    }
+    .col-inner { padding:14px; }
+    .col-title { font-weight:700; font-size:13px; letter-spacing:0.3px; color:#0B1220; }
+
     @media (max-width:600px){
       .container { width:100% !important; }
       .px { padding-left:16px !important; padding-right:16px !important; }
       .card-inner { padding:16px !important; }
       .callout-inner { padding:12px !important; }
       .ai-inner { padding:16px !important; }
+
+      /* Stack columns on mobile */
+      .stack { display:block !important; width:100% !important; }
+      .stack-pad { padding-top:12px !important; }
     }
   </style>
 </head>
@@ -180,19 +194,44 @@
                     🔗 <a href="https://globant.slack.com/archives/C016ECFGN4B/p1750222883806869">Find more details here</a>
                   </p>
 
-                  <!-- SECURITY -->
+                  <!-- SECURITY (TWO COLUMNS) -->
                   <div style="margin-top:14px; font-weight:700;">🔐 Security — Do’s & Don’ts</div>
-                  <ul class="body-text">
-                    <li><strong>Do</strong> use only Empower-approved tools and environments.</li>
-                    <li><strong>Do</strong> keep devices updated and locked.</li>
-                    <li><strong>Do</strong> verify requests and stay alert to phishing.</li>
-                    <li><strong>Don’t</strong> share client data outside authorized environments.</li>
-                    <li><strong>Don’t</strong> access systems without permission.</li>
-                    <li><strong>Don’t</strong> install unauthorized software.</li>
-                    <li><strong>Don’t</strong> forward any emails or documents out of the VDI to your Globant account.</li>
-                    <li><strong>Don’t</strong> use the Empower VDI for any personal use, including internet browsing.</li>
-                  </ul>
-                  <p class="body-text" style="margin-top:6px;">
+
+                  <table width="100%" cellpadding="0" cellspacing="0" style="margin-top:10px;">
+                    <tr>
+                      <!-- DO COLUMN -->
+                      <td class="col stack" width="50%" style="padding-right:6px;">
+                        <table width="100%" cellpadding="0" cellspacing="0" class="col-card">
+                          <tr><td class="col-inner">
+                            <div class="col-title">✅ DO</div>
+                            <ul class="body-text" style="margin:10px 0 0;">
+                              <li><strong>Do</strong> use only Empower-approved tools and environments.</li>
+                              <li><strong>Do</strong> keep devices updated and locked.</li>
+                              <li><strong>Do</strong> verify requests and stay alert to phishing.</li>
+                            </ul>
+                          </td></tr>
+                        </table>
+                      </td>
+
+                      <!-- DON'T COLUMN -->
+                      <td class="col stack stack-pad" width="50%" style="padding-left:6px;">
+                        <table width="100%" cellpadding="0" cellspacing="0" class="col-card">
+                          <tr><td class="col-inner">
+                            <div class="col-title">🚫 DON’T</div>
+                            <ul class="body-text" style="margin:10px 0 0;">
+                              <li><strong>Don’t</strong> share client data outside authorized environments.</li>
+                              <li><strong>Don’t</strong> access systems without permission.</li>
+                              <li><strong>Don’t</strong> install unauthorized software.</li>
+                              <li><strong>Don’t</strong> forward any emails or documents out of the VDI to your Globant account.</li>
+                              <li><strong>Don’t</strong> use the Empower VDI for any personal use, including internet browsing.</li>
+                            </ul>
+                          </td></tr>
+                        </table>
+                      </td>
+                    </tr>
+                  </table>
+
+                  <p class="body-text" style="margin-top:10px;">
                     🔗 <a href="https://sites.google.com/globant.com/empower-globant/work-environment">Review the full guidelines here</a>
                   </p>
 
