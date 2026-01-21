@@ -28,6 +28,7 @@
       border:1px solid #E6E9EF;
       border-radius:14px;
       background:#ffffff;
+      overflow:hidden;
     }
     .card-inner { padding:20px; }
 
@@ -44,10 +45,33 @@
     }
     .callout-inner { padding:14px; }
 
+    /* AI section – tech look */
+    .ai-card {
+      background: linear-gradient(135deg, #0B1220, #1E3A8A);
+      border-radius:14px;
+      margin-top:16px;
+    }
+    .ai-inner {
+      padding:20px;
+      color:#ffffff;
+    }
+    .ai-title {
+      font-weight:700;
+      font-size:15px;
+    }
+    .ai-text {
+      font-size:14px;
+      line-height:20px;
+      color:#E5EDFF;
+      margin-top:8px;
+    }
+
     @media (max-width:600px) {
       .container { width:100% !important; }
       .px { padding-left:16px !important; padding-right:16px !important; }
       .card-inner { padding:16px !important; }
+      .callout-inner { padding:12px !important; }
+      .ai-inner { padding:16px !important; }
     }
   </style>
 </head>
@@ -82,35 +106,35 @@
 <!-- THIS MONTH’S PULSE -->
 <tr>
 <td class="px" style="padding:16px 24px;">
-  <table width="100%" class="card">
-    <tr><td class="card-inner">
-      <div style="font-size:18px; font-weight:700; color:#0B1220;">This Month’s Pulse</div>
-      <div class="body-text" style="margin-top:10px;">
-        <p style="margin-bottom:10px;">Hi Globant-Empower team—</p>
-        <p>
-          This is the first edition of our monthly newsletter. The goal is to keep an open and ongoing line of communication with all of you, share important updates, and create a space where we can highlight our progress and achievements as an account.
-        </p>
-      </div>
-    </td></tr>
-  </table>
+<table width="100%" class="card">
+<tr><td class="card-inner">
+  <div style="font-size:18px; font-weight:700; color:#0B1220;">This Month’s Pulse</div>
+  <div class="body-text" style="margin-top:10px;">
+    <p style="margin-bottom:10px;">Hi Globant-Empower team—</p>
+    <p>
+      This is the first edition of our monthly newsletter. The goal is to keep an open and ongoing line of communication with all of you, share important updates, and create a space where we can highlight our progress and achievements as an account.
+    </p>
+  </div>
+</td></tr>
+</table>
 </td>
 </tr>
 
 <!-- HIGHLIGHTS -->
 <tr>
 <td class="px" style="padding:16px 24px;">
-  <table width="100%" class="card">
-    <tr><td class="card-inner">
-      <div class="section-title">🔹 This Month’s Highlights</div>
-      <ul class="body-text">
-        <li><strong>Business Continuity:</strong> We are off to a strong start in 2026 and proudly entering our 7th consecutive year of engagement with Empower.</li>
-        <li><strong>2026 Planning:</strong> We continue to work closely with the client to ensure strong alignment and seamless business continuity throughout the year.</li>
-        <li><strong>Account Strength:</strong> Globant remains Empower’s 2nd largest service provider, reinforcing the strength and stability of our partnership.</li>
-        <li><strong>Performance Excellence:</strong> Our performance tracking practices were recognized as a best practice and a differentiator. And our teams continue to deliver strong and consistent results!</li>
-        <li><strong>Security & Compliance:</strong> Empower continues to reinforce security protocols and compliance guidelines, while Globant teams ensure full adherence.</li>
-      </ul>
-    </td></tr>
-  </table>
+<table width="100%" class="card">
+<tr><td class="card-inner">
+  <div class="section-title">🔹 This Month’s Highlights</div>
+  <ul class="body-text">
+    <li><strong>Business Continuity:</strong> We are off to a strong start in 2026 and proudly entering our 7th consecutive year of engagement with Empower.</li>
+    <li><strong>2026 Planning:</strong> We continue to work closely with the client to ensure strong alignment and seamless business continuity throughout the year.</li>
+    <li><strong>Account Strength:</strong> Globant remains Empower’s 2nd largest service provider, reinforcing the strength and stability of our partnership.</li>
+    <li><strong>Performance Excellence:</strong> Our performance tracking practices were recognized as a best practice and a differentiator. And our teams continue to deliver strong and consistent results!</li>
+    <li><strong>Security & Compliance:</strong> Empower continues to reinforce security protocols and compliance guidelines, while Globant teams ensure full adherence.</li>
+  </ul>
+</td></tr>
+</table>
 </td>
 </tr>
 
@@ -122,7 +146,7 @@
 
 <div class="section-title">🧠 Your Resources</div>
 <div class="body-text" style="margin:8px 0;">
-  Practical reminders and best practices to support your day-to-day work.
+  Here you’ll find practical reminders and best practices designed to support your day-to-day work.
 </div>
 
 <div style="margin-top:12px; font-weight:700;">⏱️ Use of Tempo</div>
@@ -143,11 +167,11 @@
   <li><strong>Don’t</strong> share client data outside authorized environments.</li>
   <li><strong>Don’t</strong> access systems without permission.</li>
   <li><strong>Don’t</strong> install unauthorized software.</li>
+  <li><strong>Don’t</strong> forward any emails or documents out of the VDI to your Globant account.</li>
+  <li><strong>Don’t</strong> use the Empower VDI for any personal use, including internet browsing.</li>
 </ul>
 <p class="body-text" style="margin-top:6px;">
-  🔗 <a href="https://sites.google.com/globant.com/empower-globant/work-environment">
-    Review the full guidelines here
-  </a>
+  🔗 <a href="https://sites.google.com/globant.com/empower-globant/work-environment">Review the full guidelines here</a>
 </p>
 
 <table width="100%" class="callout">
@@ -155,6 +179,16 @@
   <strong>📝 Self-Retrospective Reminder</strong><br>
   Take a few minutes to complete your Self-Retrospective and reflect on your achievements and learnings from H2 2025.<br>
   <a href="https://betterme.starmeup.com/evaluations">Access here</a> · Deadline: <strong>February 6, 2026</strong>
+</td></tr>
+</table>
+
+<!-- AI INNOVATION -->
+<table width="100%" class="ai-card">
+<tr><td class="ai-inner">
+  <div class="ai-title">🚀 AI Innovation</div>
+  <div class="ai-text">
+    Globant is pioneering an AI-driven approach within the OptionTrax migration project and has successfully demonstrated current progress and results to Empower’s top leadership.
+  </div>
 </td></tr>
 </table>
 
