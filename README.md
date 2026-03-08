@@ -17,7 +17,7 @@ Internal tool to calculate sprint capacity using members, country holidays and P
 
 Run `supabase/schema.sql` in your Supabase SQL editor.
 
-- Admin authorization is now handled with `team_members.is_admin`.
+- Admin authorization is handled with `team_members.is_admin`.
 - `pto_entries` enforces ownership via RLS (member can manage own rows; admin can manage all).
 
 ## 3) API routes
@@ -42,24 +42,35 @@ Run `supabase/schema.sql` in your Supabase SQL editor.
 ```bash
 npm install
 cp .env.example .env.local
+npm run preflight
 npm run dev
 ```
 
 Then open `http://localhost:3000`.
 
-## 6) Deploy to Vercel
+## 6) Deploy to Vercel (no programming, UI only)
 
 1. Push this repo to GitHub.
-2. Import into Vercel as a Next.js project.
-3. Add environment variables:
+2. Open Vercel: https://vercel.com/new
+3. Import the repository.
+4. In **Environment Variables**, add:
    - `SUPABASE_URL`
    - `SUPABASE_ANON_KEY`
    - `NEXT_PUBLIC_SUPABASE_URL`
    - `NEXT_PUBLIC_SUPABASE_ANON_KEY`
-   - `NEXT_PUBLIC_SITE_URL` (production URL)
-4. Deploy.
-5. In Supabase SQL Editor, run `supabase/schema.sql`.
-6. Insert at least one admin member row in `team_members` with `is_admin = true` for your PM user UUID.
+   - `NEXT_PUBLIC_SITE_URL` (your final Vercel URL)
+5. Click **Deploy**.
+6. Open Supabase SQL Editor and run `supabase/schema.sql`.
+7. Create your PM/admin user in Supabase Auth (email + password).
+8. Insert the admin row in `team_members` (replace values):
+
+```sql
+insert into team_members (id, name, email, role, country, active, is_admin)
+values ('<auth_user_uuid>', 'Project Manager', '<admin_email>', 'Business Analyst', 'US', true, true)
+on conflict (id) do update set is_admin = true, active = true;
+```
+
+9. Login in the deployed app with that admin user and start configuring increments/team/holidays.
 
 ## 7) Functional deployment checklist
 
