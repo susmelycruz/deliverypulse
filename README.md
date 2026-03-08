@@ -2,6 +2,18 @@
 
 Internal tool to calculate sprint capacity using members, country holidays and PTO.
 
+## Fastest way (one-click deploy)
+
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/REPLACE_WITH_YOUR_ORG/deliverypulse&env=SUPABASE_URL,SUPABASE_ANON_KEY,NEXT_PUBLIC_SUPABASE_URL,NEXT_PUBLIC_SUPABASE_ANON_KEY,NEXT_PUBLIC_SITE_URL&project-name=sprint-capacity-planner&repository-name=deliverypulse)
+
+> Before using the button, replace `REPLACE_WITH_YOUR_ORG` with your GitHub org/user where this repo lives.
+
+After deploy:
+1. In Supabase SQL Editor run: `supabase/schema.sql`
+2. Create PM user in Supabase Auth (email + password)
+3. Run: `supabase/bootstrap_admin.sql` (replace placeholders first)
+4. Login in deployed URL with PM credentials
+
 ## 1) Folder structure
 
 - `app/` → Next.js App Router pages + API routes
@@ -12,6 +24,7 @@ Internal tool to calculate sprint capacity using members, country holidays and P
 - `components/` → shared UI shell + sign out
 - `lib/` → supabase clients, auth helpers, capacity formula
 - `supabase/schema.sql` → full PostgreSQL schema + RLS
+- `supabase/bootstrap_admin.sql` → admin bootstrap script
 
 ## 2) Database SQL
 
@@ -48,11 +61,11 @@ npm run dev
 
 Then open `http://localhost:3000`.
 
-## 6) Deploy to Vercel (no programming, UI only)
+## 6) Manual deploy to Vercel (UI)
 
 1. Push this repo to GitHub.
 2. Open Vercel: https://vercel.com/new
-3. Import the repository.
+3. Import repository.
 4. In **Environment Variables**, add:
    - `SUPABASE_URL`
    - `SUPABASE_ANON_KEY`
@@ -60,22 +73,15 @@ Then open `http://localhost:3000`.
    - `NEXT_PUBLIC_SUPABASE_ANON_KEY`
    - `NEXT_PUBLIC_SITE_URL` (your final Vercel URL)
 5. Click **Deploy**.
-6. Open Supabase SQL Editor and run `supabase/schema.sql`.
-7. Create your PM/admin user in Supabase Auth (email + password).
-8. Insert the admin row in `team_members` (replace values):
-
-```sql
-insert into team_members (id, name, email, role, country, active, is_admin)
-values ('<auth_user_uuid>', 'Project Manager', '<admin_email>', 'Business Analyst', 'US', true, true)
-on conflict (id) do update set is_admin = true, active = true;
-```
-
-9. Login in the deployed app with that admin user and start configuring increments/team/holidays.
+6. Open Supabase SQL Editor and run:
+   - `supabase/schema.sql`
+   - `supabase/bootstrap_admin.sql` (after replacing placeholders)
 
 ## 7) Functional deployment checklist
 
 - ✅ Supabase project created and Auth email/password enabled
 - ✅ Schema applied
+- ✅ PM/admin user exists with `is_admin = true`
 - ✅ At least one increment created (auto creates 4 sprints)
 - ✅ Holidays configured by sprint/country
 - ✅ Team members loaded with matching Auth UUIDs
