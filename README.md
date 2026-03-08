@@ -14,6 +14,14 @@ After deploy:
 3. Run: `supabase/bootstrap_admin.sql` (replace placeholders first)
 4. Login in deployed URL with PM credentials
 
+## If you do not see the Deploy button
+
+Open this direct Vercel page and paste your GitHub repository URL:
+
+`https://vercel.com/new`
+
+Then click **Deploy** after adding the 5 environment variables listed below.
+
 ## 1) Folder structure
 
 - `app/` → Next.js App Router pages + API routes
